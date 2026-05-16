@@ -17,6 +17,7 @@ import {
   Film,
   Zap,
   Sparkles,
+  Languages as LangIcon,
   ArrowRight,
   Maximize2,
   Minimize2,
@@ -345,6 +346,7 @@ function Home() {
                   {skill.name.includes("Video") && <Film size={24} />}
                   {skill.name.includes("Copywriter") && <PenTool size={24} />}
                   {skill.name.includes("AI") && <Cpu size={24} />}
+                  {skill.name.includes("Languages") && <LangIcon size={24} />}
                 </div>
                 <h3 className="text-xl font-display italic font-semibold mb-1">{skill.name}</h3>
                 <div className="text-sm font-bold text-brand-primary tracking-widest uppercase mb-4">{skill.level}</div>

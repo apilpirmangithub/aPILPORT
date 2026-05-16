@@ -1,6 +1,6 @@
 {
   "name": "Apil - Creator Portofolio",
-  "description": "Portofolio profesional Apil, kreator konten digital dengan fokus pada video, AI, dan strategi kreatif.",
+  "description": "Portofolio profesional Apil - AI Creator & AI Developer. Berfokus pada inovasi video AI, pengembangan aplikasi web cerdas, dan narasi visual.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

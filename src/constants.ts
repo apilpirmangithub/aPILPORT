@@ -47,6 +47,12 @@ export const SKILLS = [
     level: "Advanced",
     description: "Full Stack AI Engineer (AI-assisted). Built AI-powered web apps with LLM and Image/Video APIs, developed end-to-end features, and automated content pipelines. Prompt Engineering specialist across Image, Video, Chat, and Agents.",
     category: "Technical"
+  },
+  {
+    name: "Languages",
+    level: "Native / Limited",
+    description: "Utamanya menggunakan Bahasa Indonesia. Untuk Bahasa Inggris, memiliki kemampuan dalam membaca dan menulis dokumen teknis.",
+    category: "Communication"
   }
 ];
 
