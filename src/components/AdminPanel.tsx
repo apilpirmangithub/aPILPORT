@@ -280,7 +280,7 @@ export default function AdminPanel() {
   };
 
   const handleCreate = async () => {
-    if (!newItem.title || !newItem.thumbnail) return;
+    if ((newItem.category !== 'Dev' && !newItem.title) || !newItem.thumbnail) return;
     try {
       const itemToSave = {
         ...newItem,
@@ -673,7 +673,7 @@ export default function AdminPanel() {
                       <div className="pt-6">
                         <button 
                           onClick={handleCreate}
-                          disabled={isAnalyzing || !newItem.title || !newItem.thumbnail}
+                          disabled={isAnalyzing || (newItem.category !== 'Dev' && !newItem.title) || !newItem.thumbnail}
                           className="w-full h-[54px] bg-ink-900 text-surface-50 rounded-xl font-bold hover:bg-brand-primary hover:text-ink-900 transition-all uppercase tracking-widest text-xs disabled:opacity-30 disabled:cursor-not-allowed"
                         >
                           {uploadProgress ? 'Batch in Progress...' : 'Archive to Gallery'}
