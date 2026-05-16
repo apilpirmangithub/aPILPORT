@@ -51,7 +51,7 @@ export const SKILLS = [
   {
     name: "Languages",
     level: "Native / Limited",
-    description: "Utamanya menggunakan Bahasa Indonesia. Untuk Bahasa Inggris, memiliki kemampuan dalam membaca dan menulis dokumen teknis.",
+    description: "Native in Indonesian. Proficient in reading and writing technical documents and communication in English.",
     category: "Communication"
   }
 ];
