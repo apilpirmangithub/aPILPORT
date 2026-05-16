@@ -18,12 +18,14 @@ import {
   Zap,
   Sparkles,
   Languages as LangIcon,
+  Twitter,
+  Instagram,
   ArrowRight,
   Maximize2,
   Minimize2,
   X
 } from "lucide-react";
-import { EXPERIENCES, SKILLS, PORTFOLIO_ITEMS } from "./constants";
+import { EXPERIENCES, SKILLS, PORTFOLIO_ITEMS, SOCIAL_LINKS } from "./constants";
 import { db } from "./lib/firebase";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import AdminPanel from "./components/AdminPanel";
@@ -231,9 +233,25 @@ function Home() {
       <nav className="fixed top-0 left-0 z-50 w-full bg-surface-50/80 backdrop-blur-xl border-b border-surface-200">
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
           <span className="font-display font-bold text-ink-900 tracking-tighter text-2xl">APIL<span className="text-brand-primary">.</span></span>
-          <div className="hidden md:flex gap-12 text-sm font-bold tracking-[0.3em] uppercase text-ink-400">
-            <span>Visual Narratives</span>
-            <span className="text-brand-primary">Available for Projects</span>
+          <div className="flex items-center gap-6 md:gap-12">
+            <div className="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-ink-400">
+              <span>Visual Narratives</span>
+              <span className="text-brand-primary">Available for Projects</span>
+            </div>
+            <div className="flex gap-4">
+              {SOCIAL_LINKS.map((social) => (
+                <a 
+                  key={social.platform}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-full border border-surface-200 flex items-center justify-center text-ink-400 hover:text-ink-900 hover:border-brand-primary hover:bg-brand-primary/10 transition-all"
+                  title={social.name}
+                >
+                  {social.platform === 'x' ? <Twitter size={14} /> : <Instagram size={14} />}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </nav>
@@ -469,6 +487,20 @@ function Home() {
           <div className="text-center md:text-left">
             <span className="font-display font-black text-3xl text-ink-900 tracking-tighter">APIL<span className="text-brand-primary">.</span></span>
             <p className="mt-2 text-sm font-bold tracking-[0.4em] uppercase text-ink-400">Digital Creator</p>
+            <div className="flex gap-4 mt-6">
+              {SOCIAL_LINKS.map((social) => (
+                <a 
+                  key={social.platform}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full border border-surface-200 flex items-center justify-center text-ink-400 hover:text-ink-900 hover:border-brand-primary hover:bg-brand-primary/10 transition-all"
+                  title={social.name}
+                >
+                  {social.platform === 'x' ? <Twitter size={18} /> : <Instagram size={18} />}
+                </a>
+              ))}
+            </div>
           </div>
           
           <div className="text-sm font-bold text-ink-400 uppercase tracking-[0.5em] text-center md:text-right">

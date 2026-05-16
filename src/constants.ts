@@ -56,6 +56,19 @@ export const SKILLS = [
   }
 ];
 
+export const SOCIAL_LINKS = [
+  {
+    name: "X (Twitter)",
+    url: "https://x.com/apilpirman",
+    platform: "x"
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com/apilpirman",
+    platform: "instagram"
+  }
+];
+
 export const PORTFOLIO_ITEMS = [
   // New AI Images (Using high-quality placeholders for now)
   { id: "ai-1", type: "AI", title: "Atmospheric Mirror Still", category: "Image", thumbnail: "https://images.unsplash.com/photo-1492691523567-61125640ffcd?q=80&w=800&auto=format&fit=crop" },
